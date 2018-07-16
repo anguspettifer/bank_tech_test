@@ -7,7 +7,11 @@
         1,
         null,
         1,
+        null,
         1,
+        1,
+        1,
+        null,
         null,
         null,
         1,
@@ -25,7 +29,7 @@
         1,
         null,
         1,
-        4,
+        2,
         null,
         null,
         1,
@@ -35,6 +39,8 @@
         null
       ],
       "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/features_spec.rb": [
+        1,
+        null,
         1,
         null,
         1,
@@ -51,6 +57,6 @@
         null
       ]
     },
-    "timestamp": 1531737704
+    "timestamp": 1531738140
   }
 }

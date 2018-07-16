@@ -1,14 +1,16 @@
 require 'account'
 
-describe Account do
+describe "Feature tests:" do
+
+  account = Account.new
 
   it "I can see how much cash is in my account" do
-    expect(subject.balance).to eq 100
+    expect(account.balance).to eq 100
   end
 
   it "I can deposit cash in my account" do
-    subject.deposit(50)
-    expect(subject.balance).to eq 150
+    account.deposit(50)
+    expect(account.balance).to eq 150
   end
 
 end
