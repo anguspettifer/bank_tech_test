@@ -1,8 +1,5 @@
 require 'transaction'
 
-# book = instance_double("Book", :pages => 250)
-
-
 describe Transaction do
 
   describe "#deposit" do
