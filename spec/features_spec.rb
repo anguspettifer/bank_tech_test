@@ -13,4 +13,9 @@ describe "Feature tests:" do
     expect(account.balance).to eq 150
   end
 
+  it "I can withdraw cash from my account" do
+    account.withdraw(65)
+    expect(account.balance).to eq 85
+  end
+
 end
