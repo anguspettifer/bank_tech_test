@@ -1,14 +1,19 @@
 require 'date'
 
 class Transaction
+  attr_reader :details
 
   def initialize(account, date_class = Date)
     @account = account
     @date_class = date_class
+    @details = []
   end
 
   def deposit(ammount)
     @account.credit(ammount)
+    @details << date
+    @details << :credit
+    @details << ammount
   end
 
   def withdraw(ammount)
