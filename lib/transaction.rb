@@ -5,7 +5,11 @@ class Transaction
   end
 
   def deposit(ammount)
-    @account.credit(50)
+    @account.credit(ammount)
+  end
+
+  def withdraw(ammount)
+    @account.debit(ammount)
   end
 
 end

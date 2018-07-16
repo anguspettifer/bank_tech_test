@@ -9,22 +9,33 @@ describe "Feature tests:" do
     expect(account.balance).to eq 100
   end
 
-  it "I can credit my account" do
+  it "My account can be credited" do
     account.credit(50)
     expect(account.balance).to eq 150
   end
 
-  it "I can debit account" do
+  it "My account can be debited" do
     account.debit(65)
     expect(account.balance).to eq 85
   end
 
-  account = Account.new
-  transaction = Transaction.new(account)
-
-  it "I can view my latest transaction" do
+  it "I can deposit money" do
+    account = Account.new
+    transaction = Transaction.new(account)
     transaction.deposit(50)
-    expect(transaction.view_latest).to eq "Date: 16-jul-18, credit: 50, balance: 150"
+    expect(account.balance).to eq 150
   end
+
+  it "I can withdraw money" do
+    account = Account.new
+    transaction = Transaction.new(account)
+    transaction.withdraw(25)
+    expect(account.balance).to eq 75
+  end
+
+  # it "I can view my latest transaction" do
+  #   transaction.deposit(50)
+  #   expect(transaction.view_latest).to eq "Date: 16-jul-18, credit: 50, balance: 150"
+  # end
 
 end

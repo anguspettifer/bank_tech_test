@@ -1,10 +1,10 @@
-## Bank tech test
+# Bank tech test
 
 An application that allows a user to deposit and withdraw money, and view their transaction history.
 
 [Set Up](#set up) | [User Stories](#user stories) | [My process in a nutshell](#my process in a nutshell) | [My process](#my process)
 
-# Set Up
+## Set Up
 
 Clone this repo
 Run `bundle`
@@ -17,8 +17,8 @@ Deposit/withdraw money:
 `transaction.withdraw(100)`
 View transactions:
 
-# User Stories
+## User Stories
 
-# My process in a nutshell
+## My process in a nutshell
 
-# My process
+## My process
