@@ -64,9 +64,9 @@ I would like to view my transaction history
 
 3. TDD
 - Feature test account
-..* unit test account
+⋅⋅* unit test account
 - Expand feature test suite to include transaction
-..* unit test transaction, injecting and stubbing account behaviour
+⋅⋅* unit test transaction, injecting and stubbing account behaviour
 - Expand feature test suite to include statement
-..* unit test statement, injecting and stubbing transaction behaviour
-..* extract relevant behaviour from transaction into statement
+⋅⋅* unit test statement, injecting and stubbing transaction behaviour
+⋅⋅* extract relevant behaviour from transaction into statement
