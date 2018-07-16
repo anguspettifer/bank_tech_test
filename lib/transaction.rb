@@ -16,6 +16,7 @@ class Transaction
 
   def withdraw(ammount)
     @account.debit(ammount)
+    update_details(@details, date, :debit, ammount)
   end
 
   private
