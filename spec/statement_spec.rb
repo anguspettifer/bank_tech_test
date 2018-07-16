@@ -5,7 +5,11 @@ describe Statement do
   describe "#view_latest" do
 
     it "Returns latest transaction" do
-      transaction_double = instance_double("Transaction", :details => ["16-JUL-2018", :credit, 50])
+      todays_date_double = double("today's date")
+      allow(todays_date_double).to receive(:day).and_return(16)
+      allow(todays_date_double).to receive(:month).and_return(7)
+      allow(todays_date_double).to receive(:year).and_return(2018)
+      transaction_double = instance_double("Transaction", :details => [todays_date_double, :credit, 50])
       account_double = instance_double("Account", :balance => 150)
       statement = described_class.new(transaction_double, account_double)
       expect(statement.view_latest).to eq "Date: 16-JUL-2018, credit: 50, balance: 150"
