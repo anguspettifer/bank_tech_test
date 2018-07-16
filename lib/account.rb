@@ -1,9 +1,13 @@
 class Account
   attr_reader :balance
+  STARTING_BALANCE = 100
 
   def initialize
-    STARTING_BALANCE = 100
     @balance = STARTING_BALANCE
+  end
+
+  def deposit(ammount)
+    @balance += ammount
   end
 
 end
