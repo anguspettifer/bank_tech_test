@@ -1,0 +1,39 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/account_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/lib/account.rb": [
+        1,
+        1,
+        null,
+        1,
+        2,
+        null,
+        null,
+        null
+      ],
+      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/features_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ]
+    },
+    "timestamp": 1531736941
+  }
+}
