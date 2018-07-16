@@ -12,14 +12,14 @@ describe Account do
 
   describe "#deposit" do
     it "updates balance by the ammount given" do
-      account.deposit(50)
+      account.credit(50)
       expect(account.balance).to eq 150
     end
   end
 
   describe "#withdraw" do
     it "withdraws balance by the ammount given" do
-      account.withdraw(125)
+      account.debit(125)
       expect(account.balance).to eq 25
     end
   end

@@ -6,11 +6,11 @@ class Account
     @balance = STARTING_BALANCE
   end
 
-  def deposit(ammount)
+  def credit(ammount)
     @balance += ammount
   end
 
-  def withdraw(ammount)
+  def debit(ammount)
     @balance -= ammount
   end
 

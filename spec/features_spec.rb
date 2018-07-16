@@ -9,13 +9,13 @@ describe "Feature tests:" do
     expect(account.balance).to eq 100
   end
 
-  it "I can deposit cash in my account" do
-    account.deposit(50)
+  it "I can credit my account" do
+    account.credit(50)
     expect(account.balance).to eq 150
   end
 
-  it "I can withdraw cash from my account" do
-    account.withdraw(65)
+  it "I can debit account" do
+    account.debit(65)
     expect(account.balance).to eq 85
   end
 

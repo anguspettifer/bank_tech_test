@@ -12,7 +12,7 @@ describe Transaction do
       account_double = instance_double("Account", :deposit)
       transaction = described_class.new(account_double)
 
-      expect(account_double).to receive(:deposit).with(50)
+      expect(account_double).to receive(:credit).with(50)
       transaction.deposit(50)
     end
 
