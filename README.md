@@ -20,5 +20,6 @@ View transactions:
 ## User Stories
 
 ## My process in a nutshell
+<img src="/assets/images/Diagram_bank_tech_test.htm" width="750px" />
 
 ## My process
