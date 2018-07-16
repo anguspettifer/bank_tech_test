@@ -6,11 +6,16 @@ class Statement
   end
 
   def view_latest
-    array = @transaction.details
-    date = array[0]
-    balance = @account.balance
-    "Date: #{formatted_date(date)}, #{array[1]}: #{array[2]}, balance: #{balance}"
+    date = transaction.details[0]
+    transaction_type = transaction.details[1]
+    transaction_ammount = transaction.details[2]
+    balance = account.balance
+    "Date: #{formatted_date(date)}, #{transaction_type}: #{transaction_ammount}, balance: #{balance}"
   end
+
+  private
+  attr_reader :transaction, :account
+
 
   def formatted_date(date)
     day = date.day
