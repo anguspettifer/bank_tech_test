@@ -11,14 +11,14 @@ class Transaction
 
   def deposit(ammount)
     @account.credit(ammount)
-    @details << date
-    @details << :credit
-    @details << ammount
+    update_details(@details, date, :credit, ammount)
   end
 
   def withdraw(ammount)
     @account.debit(ammount)
   end
+
+  private
 
   def date
     day = @date_class.today.day
@@ -28,7 +28,11 @@ class Transaction
     formatted_date = "#{day}-#{month_str}-#{year}"
   end
 
-  private
+  def update_details(details, date, type, ammount)
+    @details << date
+    @details << type
+    @details << ammount
+  end
 
   def month_format(month_int)
     month_hash = {
