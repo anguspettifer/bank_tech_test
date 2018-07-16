@@ -24,8 +24,11 @@ describe "Feature tests:" do
   end
 
   it "I can view my latest transaction" do
+    account = Account.new
+    transaction = Transaction.new(account)
+    statement = Statement.new(transaction, account)
     transaction.deposit(50)
-    expect(transaction.view_latest).to eq "Date: 16-jul-18, credit: 50, balance: 150"
+    expect(statement.view_latest).to eq "Date: 16-JUL-2018, credit: 50, balance: 150"
   end
 
 end
