@@ -27,10 +27,12 @@ class Transaction
   end
 
   def update_details(details, date, type, ammount, new_balance)
-    @details << date
-    @details << type
-    @details << ammount
-    @details << new_balance
+    transaction = []
+    transaction << date
+    transaction << type
+    transaction << ammount
+    transaction << new_balance
+    details << transaction
   end
 
 end

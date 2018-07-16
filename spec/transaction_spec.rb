@@ -21,7 +21,7 @@ describe Transaction do
       allow(date_double).to receive(:today).and_return(todays_date_double)
       transaction = described_class.new(account_double, date_double)
       transaction.deposit(75)
-      expect(transaction.details).to eq [todays_date_double, :credit, 75, 175]
+      expect(transaction.details).to eq [[todays_date_double, :credit, 75, 175]]
     end
 
   end
@@ -45,7 +45,7 @@ describe Transaction do
       allow(date_double).to receive(:today).and_return(todays_date_double)
       transaction = described_class.new(account_double, date_double)
       transaction.withdraw(40)
-      expect(transaction.details).to eq [todays_date_double, :debit, 40, 60]
+      expect(transaction.details).to eq [[todays_date_double, :debit, 40, 60]]
     end
 
   end
