@@ -2,7 +2,7 @@
 
 An application that allows a user to deposit and withdraw money, and view their transaction history.
 
-[Set Up](#set up) | [User Stories](#user stories) | [My process in a nutshell](#my process in a nutshell) | [Process](#process)
+[Set Up](#set-up) | [User Stories](#user-stories) | [Process](#process)
 
 ## Set Up
 
@@ -19,7 +19,4 @@ View transactions:
 
 ## User Stories
 
-## My process in a nutshell
-<img src="/assets/images/diagram_bank_tech_test.png" width="750px" />
-
-## My process
+## Process
