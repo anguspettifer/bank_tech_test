@@ -1,73 +1,36 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/account_spec.rb": [
+      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/transaction_spec.rb": [
         1,
+        null,
+        null,
+        null,
         null,
         1,
         null,
         1,
         null,
         1,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         1,
-        1,
-        1,
-        null,
-        null,
         null,
         1,
         1,
-        1,
-        1,
-        null,
         null,
         null,
         null,
         null,
         null
       ],
-      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/lib/account.rb": [
-        1,
-        1,
-        1,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        1,
-        2,
-        null,
-        null,
-        null
-      ],
-      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/features_spec.rb": [
-        1,
-        null,
-        1,
-        null,
+      "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/lib/transaction.rb": [
         1,
         null,
         1,
         1,
         null,
         null,
-        1,
-        1,
-        1,
-        null,
-        null,
-        1,
         1,
         1,
         null,
@@ -75,6 +38,6 @@
         null
       ]
     },
-    "timestamp": 1531739248
+    "timestamp": 1531741890
   }
 }

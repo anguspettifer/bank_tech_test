@@ -1,4 +1,5 @@
 require 'account'
+require 'transaction'
 
 describe "Feature tests:" do
 
@@ -16,6 +17,14 @@ describe "Feature tests:" do
   it "I can withdraw cash from my account" do
     account.withdraw(65)
     expect(account.balance).to eq 85
+  end
+
+  account = Account.new
+  transaction = Transaction.new(account)
+
+  it "I can view my latest transaction" do
+    transaction.deposit(50)
+    expect(transaction.view_latest).to eq "Date: 16-jul-18, credit: 50, balance: 150"
   end
 
 end
