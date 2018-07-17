@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Understands how to store money
 class Account
   attr_reader :balance
   STARTING_BALANCE = 100
@@ -13,5 +16,4 @@ class Account
   def debit(amount)
     @balance -= amount
   end
-
 end

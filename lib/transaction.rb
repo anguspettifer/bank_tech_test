@@ -1,5 +1,8 @@
+# frozen_string_literal: true
+
 require 'date'
 
+# Records the flow of cash
 class Transaction
   attr_reader :details
 
@@ -20,10 +23,12 @@ class Transaction
   end
 
   private
+
   attr_reader :account
+  attr_reader :date_class
 
   def date
-    @date_class.today
+    date_class.today
   end
 
   def update_details(details, date, type, amount, new_balance)
@@ -34,5 +39,4 @@ class Transaction
     transaction << new_balance
     details << transaction
   end
-
 end
