@@ -9,14 +9,14 @@ class Transaction
     @details = []
   end
 
-  def deposit(ammount)
-    account.credit(ammount)
-    update_details(details, date, :credit, ammount, account.balance)
+  def deposit(amount)
+    account.credit(amount)
+    update_details(details, date, :credit, amount, account.balance)
   end
 
-  def withdraw(ammount)
-    account.debit(ammount)
-    update_details(details, date, :debit, ammount, account.balance)
+  def withdraw(amount)
+    account.debit(amount)
+    update_details(details, date, :debit, amount, account.balance)
   end
 
   private
@@ -26,11 +26,11 @@ class Transaction
     @date_class.today
   end
 
-  def update_details(details, date, type, ammount, new_balance)
+  def update_details(details, date, type, amount, new_balance)
     transaction = []
     transaction << date
     transaction << type
-    transaction << ammount
+    transaction << amount
     transaction << new_balance
     details << transaction
   end

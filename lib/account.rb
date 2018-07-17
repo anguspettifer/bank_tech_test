@@ -6,12 +6,12 @@ class Account
     @balance = STARTING_BALANCE
   end
 
-  def credit(ammount)
-    @balance += ammount
+  def credit(amount)
+    @balance += amount
   end
 
-  def debit(ammount)
-    @balance -= ammount
+  def debit(amount)
+    @balance -= amount
   end
 
 end
