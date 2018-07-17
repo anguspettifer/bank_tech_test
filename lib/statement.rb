@@ -42,7 +42,6 @@ class Statement
 
   def format_statement(transaction)
     format_array = []
-    format_array << 'date || credit || debit || balance'
     transaction.details.each do |detail|
       date = detail[0]
       type = detail[1]
@@ -50,6 +49,8 @@ class Statement
       balance = detail[3]
       format_array << formatted_transaction(date, type, amount, balance)
     end
+    format_array << 'date || credit || debit || balance'
+    format_array.reverse!
     format_array.join("\n")
   end
 

@@ -20,7 +20,7 @@ describe Statement do
 
       allow(transaction_double).to receive(:details).and_return([[yesterdays_date_double, :credit, 50, 150], [todays_date_double, :credit, 125, 275], [todays_date_double, :debit, 12, 263]])
 
-      expect(statement.view).to eq "date || credit || debit || balance\n15-JUL-2018 || 50.00 ||  || 150.00\n16-JUL-2018 || 125.00 ||  || 275.00\n16-JUL-2018 ||  || 12.00 || 263.00"
+      expect(statement.view).to eq "date || credit || debit || balance\n16-JUL-2018 ||  || 12.00 || 263.00\n16-JUL-2018 || 125.00 ||  || 275.00\n15-JUL-2018 || 50.00 ||  || 150.00"
     end
   end
 end

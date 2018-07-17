@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T11:48:27+01:00">2018-07-17T11:48:27+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T11:53:57+01:00">2018-07-17T11:53:57+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         2.46
+         2.45
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>7</b> files in total.
-    <b>155</b> relevant lines. 
-    <span class="green"><b>155</b> lines covered</span> and
+    <b>156</b> relevant lines. 
+    <span class="green"><b>156</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -63,11 +63,11 @@
       <tr>
         <td class="strong"><a href="#9b522f4bc902652224019af3acb5354ba40beab5" class="src_link" title="lib/statement.rb">lib/statement.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>63</td>
-        <td>32</td>
-        <td>32</td>
+        <td>64</td>
+        <td>33</td>
+        <td>33</td>
         <td>0</td>
-        <td>3.7</td>
+        <td>3.6</td>
       </tr>
       
       <tr>
@@ -274,8 +274,8 @@
     <h3>lib/statement.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>32</b> relevant lines. 
-      <span class="green"><b>32</b> lines covered</span> and
+      <b>33</b> relevant lines. 
+      <span class="green"><b>33</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -550,112 +550,118 @@
         <li class="covered" data-hits="2" data-linenumber="45">
           <span class="hits">2</span>
           
-          <code class="ruby">    format_array &lt;&lt; &#39;date || credit || debit || balance&#39;</code>
-        </li>
-      
-        <li class="covered" data-hits="2" data-linenumber="46">
-          <span class="hits">2</span>
-          
           <code class="ruby">    transaction.details.each do |detail|</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="47">
+        <li class="covered" data-hits="6" data-linenumber="46">
           <span class="hits">6</span>
           
           <code class="ruby">      date = detail[0]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="48">
+        <li class="covered" data-hits="6" data-linenumber="47">
           <span class="hits">6</span>
           
           <code class="ruby">      type = detail[1]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="49">
+        <li class="covered" data-hits="6" data-linenumber="48">
           <span class="hits">6</span>
           
           <code class="ruby">      amount = detail[2]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="50">
+        <li class="covered" data-hits="6" data-linenumber="49">
           <span class="hits">6</span>
           
           <code class="ruby">      balance = detail[3]</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="51">
+        <li class="covered" data-hits="6" data-linenumber="50">
           <span class="hits">6</span>
           
           <code class="ruby">      format_array &lt;&lt; formatted_transaction(date, type, amount, balance)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">    end</code>
         </li>
       
+        <li class="covered" data-hits="2" data-linenumber="52">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    format_array &lt;&lt; &#39;date || credit || debit || balance&#39;</code>
+        </li>
+      
         <li class="covered" data-hits="2" data-linenumber="53">
+          <span class="hits">2</span>
+          
+          <code class="ruby">    format_array.reverse!</code>
+        </li>
+      
+        <li class="covered" data-hits="2" data-linenumber="54">
           <span class="hits">2</span>
           
           <code class="ruby">    format_array.join(&quot;\n&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="56">
+        <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
           <code class="ruby">  def formatted_transaction(date, type, amount, balance)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="57">
+        <li class="covered" data-hits="6" data-linenumber="58">
           <span class="hits">6</span>
           
           <code class="ruby">    date = formatted_date(date)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="58">
+        <li class="covered" data-hits="6" data-linenumber="59">
           <span class="hits">6</span>
           
           <code class="ruby">    credit_amount = format(&#39;%.2f&#39;, amount) if type == :credit</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="59">
+        <li class="covered" data-hits="6" data-linenumber="60">
           <span class="hits">6</span>
           
           <code class="ruby">    debit_amount = format(&#39;%.2f&#39;, amount) if type == :debit</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="60">
+        <li class="covered" data-hits="6" data-linenumber="61">
           <span class="hits">6</span>
           
           <code class="ruby">    balance = format(&#39;%.2f&#39;, balance)</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="61">
+        <li class="covered" data-hits="6" data-linenumber="62">
           <span class="hits">6</span>
           
           <code class="ruby">    &quot;#{date} || #{credit_amount} || #{debit_amount} || #{balance}&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">end</code>
@@ -1381,7 +1387,7 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(statement.view).to eq &quot;date || credit || debit || balance\n#{date} || 50.00 ||  || 50.00\n#{date} || 150.00 ||  || 200.00\n#{date} ||  || 120.00 || 80.00&quot;</code>
+          <code class="ruby">      expect(statement.view).to eq &quot;date || credit || debit || balance\n#{date} ||  || 120.00 || 80.00\n#{date} || 150.00 ||  || 200.00\n#{date} || 50.00 ||  || 50.00&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
@@ -1556,7 +1562,7 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">      expect(statement.view).to eq &quot;date || credit || debit || balance\n15-JUL-2018 || 50.00 ||  || 150.00\n16-JUL-2018 || 125.00 ||  || 275.00\n16-JUL-2018 ||  || 12.00 || 263.00&quot;</code>
+          <code class="ruby">      expect(statement.view).to eq &quot;date || credit || debit || balance\n16-JUL-2018 ||  || 12.00 || 263.00\n16-JUL-2018 || 125.00 ||  || 275.00\n15-JUL-2018 || 50.00 ||  || 150.00&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
