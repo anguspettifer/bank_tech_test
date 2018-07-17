@@ -69,4 +69,4 @@ I would like to view my transaction history
 - Unit test transaction, injecting and stubbing account behaviour
 - Expand feature test suite to include statement
 - Unit test statement, injecting and stubbing transaction behaviour
-- Eßxtract relevant behaviour from transaction into statement
+- Extract relevant behaviour from transaction into statement

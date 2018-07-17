@@ -7,29 +7,13 @@ class Statement
   def view_latest
     date = transaction.details[0][0]
     transaction_type = transaction.details[0][1]
-    transaction_ammount = transaction.details[0][2]
+    transaction_amount = transaction.details[0][2]
     balance = transaction.details[0][3]
-    "Date: #{formatted_date(date)}, #{transaction_type}: #{transaction_ammount}, balance: #{balance}"
+    "Date: #{formatted_date(date)}, #{transaction_type}: #{transaction_amount}, balance: #{balance}"
   end
 
   def view
-    horrible_array = []
-    horrible_array << "date || credit || debit || balance"
-    for i in 0...transaction.details.size do
-      date = transaction.details[i][0]
-      transaction_type = transaction.details[i][1]
-      transaction_ammount = "%.2f" % transaction.details[i][2]
-      balance = "%.2f" % transaction.details[i][3]
-      if transaction_type == :credit
-        credit_ammount = transaction_ammount
-        debit_ammount = ""
-      else
-        debit_ammount = transaction_ammount
-        credit_ammount = ""
-      end
-      horrible_array << "#{formatted_date(date)} || #{credit_ammount} || #{debit_ammount} || #{balance}"
-    end
-    horrible_array.join("\n")
+    format_statement(transaction)
   end
 
   private
@@ -62,4 +46,22 @@ class Statement
     month_str = month_hash[month_int]
   end
 
+  def format_statement(transaction)
+    format_array = []
+    format_array << "date || credit || debit || balance"
+    transaction.details.each do |detail|
+      date = detail[0]
+      type = detail[1]
+      amount = detail[2]
+      balance = detail[3]
+      format_array << formatted_transaction(date, type, amount, balance)
+    end
+    format_array.join("\n")
+  end
+
+  def formatted_transaction(date, type, amount, balance)
+    credit_amount = "%.2f" % amount if type == :credit
+    debit_amount = "%.2f" % amount if type == :debit
+    "#{formatted_date(date)} || #{ credit_amount} || #{debit_amount} || #{"%.2f" % balance}"
+  end
 end
