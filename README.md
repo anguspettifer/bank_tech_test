@@ -8,21 +8,23 @@ An application that allows a user to deposit and withdraw money, and view their 
 ## Getting started
 
 * Fork this repo and clone to your local machine
+* Navigate to the root directory
 
 ```
 > bundle install
 > irb
+> require './irb.rb'
 ```
-Your starting balance is £100, its a bonus for signing up to this fantastic bank account
+* This automatically creates an account with a balance of zero
 ```
-> account = Account.new
-> transaction = Transaction.new(account)
-> transaction.deposit(50)
-> transaction.withdraw(100)
-> statement = Statement.new(transaction)
-> statement.view
+> @transaction.deposit(1000)
+> @transaction.deposit(2000)
+> @transaction.withdraw(500)
+> puts @statement.view
 ```
 I won't spoil the surprise!
+
+If you run this programme over several days, you will note the change in date of transactions.
 
 Running tests
 
@@ -65,3 +67,14 @@ I would like to view my transaction history
 - Expand feature test suite to include statement
 - Unit test statement, injecting and stubbing transaction behaviour
 - Extract relevant behaviour from transaction into statement
+- Refactor rest suite
+
+4.
+- Check alignment with initial criteria
+- TDD minor adjustments
+
+5.
+- Make user-friendly IRB file
+
+6.
+- Test 'unhappy' path
