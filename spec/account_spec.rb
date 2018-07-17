@@ -3,7 +3,7 @@
 require 'account'
 
 describe Account do
-  account = described_class.new
+  subject(:account) { described_class.new }
 
   describe '#balance' do
     it 'I can see how much cash is in my account' do
@@ -20,8 +20,8 @@ describe Account do
 
   describe '#withdraw' do
     it 'withdraws balance by the ammount given' do
-      account.debit(125)
-      expect(account.balance).to eq 25
+      account.debit(85)
+      expect(account.balance).to eq 15
     end
   end
 end
