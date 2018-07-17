@@ -13,16 +13,16 @@ describe Account do
 
   describe '#credit' do
     it 'Updates balance by the amount given' do
-      account.credit(50)
-      expect(account.balance).to eq 50
+      # account.credit(50)
+      expect(account.credit(50)).to eq 50
     end
   end
 
   describe '#debit' do
     it 'Reduces balance by the amount given' do
-      account.credit(100)
-      account.debit(85)
-      expect(account.balance).to eq 15
+      # account.credit(100)
+      # account.debit(85)
+      expect(account.debit(85)).to eq -85
     end
   end
 end
