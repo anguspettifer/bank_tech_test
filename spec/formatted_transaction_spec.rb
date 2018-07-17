@@ -9,8 +9,7 @@ describe FormattedTransaction do
   subject(:formatted_trasaction) { described_class.new(transaction_double) }
 
   describe '#create_format' do
-    it "Formats a transaction" do
-
+    it 'Formats a transaction' do
       allow(transaction_double).to receive(:date).and_return(todays_date_double)
       allow(transaction_double).to receive(:type).and_return(:credit)
       allow(transaction_double).to receive(:amount).and_return(50)

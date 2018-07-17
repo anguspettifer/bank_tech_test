@@ -2,7 +2,6 @@
 
 # Understands how to format a transaction
 class FormattedTransaction
-
   def initialize(transaction)
     @transaction = transaction
   end
@@ -19,11 +18,11 @@ class FormattedTransaction
   end
 
   private
+
   def format_date(date)
     day = date.day
     month = date.month
     year = date.year
     "#{day}/#{month}/#{year}"
   end
-
 end
