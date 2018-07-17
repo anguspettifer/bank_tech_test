@@ -15,13 +15,13 @@ describe Transaction do
       allow(date_double).to receive(:today).and_return(todays_date_double)
     end
 
-    it 'I can deposit money into my account' do
+    it 'Deposits money into account' do
       expect(account_double).to receive(:credit).with(50)
       transaction.deposit(50)
     end
 
-    it 'I cannot deposit negative money into my account' do
-      message = "Cannot facilitate negative amount"
+    it 'Negative money cannot be deposited' do
+      message = "Can only facilitate positive integer"
       expect { transaction.deposit(-50) }.to raise_error message
     end
 
@@ -38,13 +38,13 @@ describe Transaction do
       allow(date_double).to receive(:today).and_return(todays_date_double)
     end
 
-    it 'I can withdraw money from my account' do
+    it 'Withdraws money from account' do
       expect(account_double).to receive(:debit).with(25)
       transaction.withdraw(25)
     end
 
-    it 'I cannot withdraw negative money from my account' do
-      message = "Cannot facilitate negative amount"
+    it 'Negative money cannot be withdrawn' do
+      message = "Can only facilitate positive integer"
       expect { transaction.withdraw(-50) }.to raise_error message
     end
 

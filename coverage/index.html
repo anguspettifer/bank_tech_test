@@ -14,7 +14,7 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T14:20:04+01:00">2018-07-17T14:20:04+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-07-17T14:34:41+01:00">2018-07-17T14:34:41+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -953,13 +953,13 @@
         <li class="covered" data-hits="12" data-linenumber="46">
           <span class="hits">12</span>
           
-          <code class="ruby">    error_message = &quot;Cannot facilitate negative amount&quot;</code>
+          <code class="ruby">    error_message = &quot;Can only facilitate positive integer&quot;</code>
         </li>
       
         <li class="covered" data-hits="12" data-linenumber="47">
           <span class="hits">12</span>
           
-          <code class="ruby">    fail error_message if amount &lt; 0</code>
+          <code class="ruby">    fail error_message unless amount &gt; 0</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
@@ -1050,7 +1050,7 @@
         <li class="covered" data-hits="1" data-linenumber="9">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;My balance is default to zerio&#39; do</code>
+          <code class="ruby">    it &#39;My balance is default to zero&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="10">
@@ -1080,13 +1080,13 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#deposit&#39; do</code>
+          <code class="ruby">  describe &#39;#credit&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;updates balance by the ammount given&#39; do</code>
+          <code class="ruby">    it &#39;Updates balance by the amount given&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
@@ -1122,13 +1122,13 @@
         <li class="covered" data-hits="1" data-linenumber="21">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;#withdraw&#39; do</code>
+          <code class="ruby">  describe &#39;#debit&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;withdraws balance by the ammount given&#39; do</code>
+          <code class="ruby">    it &#39;Reduces balance by the amount given&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="23">
@@ -1538,7 +1538,7 @@
         <li class="covered" data-hits="1" data-linenumber="12">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;Returns statement&#39; do</code>
+          <code class="ruby">    it &#39;Returns statement in user friendly format&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="13">
@@ -1749,7 +1749,7 @@
         <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;I can deposit money into my account&#39; do</code>
+          <code class="ruby">    it &#39;Deposits money into account&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="19">
@@ -1779,13 +1779,13 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;I cannot deposit negative money into my account&#39; do</code>
+          <code class="ruby">    it &#39;Negative money cannot be deposited&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">      message = &quot;Cannot facilitate negative amount&quot;</code>
+          <code class="ruby">      message = &quot;Can only facilitate positive integer&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="25">
@@ -1887,7 +1887,7 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;I can withdraw money from my account&#39; do</code>
+          <code class="ruby">    it &#39;Withdraws money from account&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="42">
@@ -1917,13 +1917,13 @@
         <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;I cannot withdraw negative money from my account&#39; do</code>
+          <code class="ruby">    it &#39;Negative money cannot be withdrawn&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="47">
           <span class="hits">1</span>
           
-          <code class="ruby">      message = &quot;Cannot facilitate negative amount&quot;</code>
+          <code class="ruby">      message = &quot;Can only facilitate positive integer&quot;</code>
         </li>
       
         <li class="covered" data-hits="2" data-linenumber="48">

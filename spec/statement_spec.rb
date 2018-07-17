@@ -9,7 +9,7 @@ describe Statement do
   subject(:statement) { described_class.new(transaction_double) }
 
   describe '#view' do
-    it 'Returns statement' do
+    it 'Returns statement in user friendly format' do
       allow(todays_date_double).to receive(:day).and_return(16)
       allow(todays_date_double).to receive(:month).and_return(7)
       allow(todays_date_double).to receive(:year).and_return(2018)
