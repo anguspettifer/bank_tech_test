@@ -21,7 +21,7 @@ describe Transaction do
     end
 
     it 'Negative money cannot be deposited' do
-      message = "Can only facilitate positive integer"
+      message = 'Can only facilitate positive integer'
       expect { transaction.deposit(-50) }.to raise_error message
     end
 
@@ -44,7 +44,7 @@ describe Transaction do
     end
 
     it 'Negative money cannot be withdrawn' do
-      message = "Can only facilitate positive integer"
+      message = 'Can only facilitate positive integer'
       expect { transaction.withdraw(-50) }.to raise_error message
     end
 

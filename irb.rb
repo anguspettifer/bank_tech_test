@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative './lib/account.rb'
 require_relative './lib/transaction.rb'
 require_relative './lib/statement.rb'

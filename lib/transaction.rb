@@ -43,8 +43,7 @@ class Transaction
   end
 
   def check_for_error(amount)
-    error_message = "Can only facilitate positive integer"
-    fail error_message unless amount > 0
+    error_message = 'Can only facilitate positive integer'
+    raise error_message unless amount > 0
   end
-
 end
