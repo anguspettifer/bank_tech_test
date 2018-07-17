@@ -51,11 +51,6 @@ I would like to withdraw money
 ```
 ```
 As a customer
-So that I can remember what I just did
-I would like to view my latest transaction
-```
-```
-As a customer
 So that I can keep my finances in order
 I would like to view my transaction history
 ```

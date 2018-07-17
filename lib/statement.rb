@@ -4,14 +4,6 @@ class Statement
     @transaction = transaction
   end
 
-  def view_latest
-    date = transaction.details[0][0]
-    transaction_type = transaction.details[0][1]
-    transaction_amount = transaction.details[0][2]
-    balance = transaction.details[0][3]
-    "Date: #{formatted_date(date)}, #{transaction_type}: #{transaction_amount}, balance: #{balance}"
-  end
-
   def view
     format_statement(transaction)
   end
