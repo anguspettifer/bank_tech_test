@@ -20,6 +20,11 @@ describe Transaction do
       transaction.deposit(50)
     end
 
+    it 'I cannot deposit negative money into my account' do
+      message = "Cannot facilitate negative amount"
+      expect { transaction.deposit(-50) }.to raise_error message
+    end
+
     it 'Updates the transaction details' do
       transaction.deposit(75)
       expect(transaction.details).to eq [[todays_date_double, :credit, 75, 175]]
@@ -36,6 +41,11 @@ describe Transaction do
     it 'I can withdraw money from my account' do
       expect(account_double).to receive(:debit).with(25)
       transaction.withdraw(25)
+    end
+
+    it 'I cannot withdraw negative money from my account' do
+      message = "Cannot facilitate negative amount"
+      expect { transaction.withdraw(-50) }.to raise_error message
     end
 
     it 'Updates the transaction details' do

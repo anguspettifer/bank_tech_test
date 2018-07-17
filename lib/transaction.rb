@@ -13,11 +13,15 @@ class Transaction
   end
 
   def deposit(amount)
+    error_message = "Cannot facilitate negative amount"
+    fail error_message if amount < 0
     account.credit(amount)
     update_details(details, date, :credit, amount, account.balance)
   end
 
   def withdraw(amount)
+    error_message = "Cannot facilitate negative amount"
+    fail error_message if amount < 0
     account.debit(amount)
     update_details(details, date, :debit, amount, account.balance)
   end
