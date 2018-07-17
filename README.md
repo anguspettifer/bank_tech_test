@@ -56,18 +56,21 @@ As a customer
 So that I can keep my finances in order
 I would like to view my transaction history
 ```
-2. Initial diagram
+2. Diagram
 <img src="/assets/images/diagram_bank_tech_test.png" width="750px" />
 
 3. TDD
 - Feature test account
 - Unit test account
+- Refactor
 - Expand feature test suite to include transaction
-- Unit test transaction, injecting and stubbing account behaviour
+- Unit test transaction, injecting and stubbing account and time behaviour
 - Expand feature test suite to include statement
-- Unit test statement, injecting and stubbing transaction behaviour
+- Refactor
+- Unit test statement, injecting and stubbing transaction and time behaviour
 - Extract relevant behaviour from transaction into statement
-- Refactor rest suite
+- Refactor
+- Refactor test suite
 
 4.
 - Check alignment with initial criteria
