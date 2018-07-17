@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'account'
-require 'transaction'
+require 'transaction_records'
 require 'date'
 
 describe 'Feature tests:' do
@@ -12,32 +12,32 @@ describe 'Feature tests:' do
     end
   end
 
-  describe 'transaction' do
+  describe 'transaction_records' do
     it 'I can deposit money' do
       account = Account.new
-      transaction = Transaction.new(account)
-      transaction.deposit(60)
+      transaction_records = TransactionRecords.new(account)
+      transaction_records.deposit(60)
       expect(account.balance).to eq 60
     end
 
     it 'I can withdraw money' do
       account = Account.new
-      transaction = Transaction.new(account)
-      transaction.deposit(100)
-      transaction.withdraw(25)
+      transaction_records = TransactionRecords.new(account)
+      transaction_records.deposit(100)
+      transaction_records.withdraw(25)
       expect(account.balance).to eq 75
     end
   end
 
   describe 'statement' do
-    it 'I can view a statement of transactions' do
+    it 'I can view a statement of transaction_records' do
       account = Account.new
-      transaction = Transaction.new(account)
-      statement = Statement.new(transaction)
+      transaction_records = TransactionRecords.new(account)
+      statement = Statement.new(transaction_records)
       date = formatted_date(Date.today)
-      transaction.deposit(50)
-      transaction.deposit(150)
-      transaction.withdraw(120)
+      transaction_records.deposit(50)
+      transaction_records.deposit(150)
+      transaction_records.withdraw(120)
       expect(statement.view).to eq "date || credit || debit || balance\n#{date} ||  || 120.00 || 80.00\n#{date} || 150.00 ||  || 200.00\n#{date} || 50.00 ||  || 50.00"
     end
   end
