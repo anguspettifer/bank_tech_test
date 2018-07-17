@@ -50,8 +50,7 @@ class Statement
       format_array << formatted_transaction(date, type, amount, balance)
     end
     format_array << 'date || credit || debit || balance'
-    format_array.reverse!
-    format_array.join("\n")
+    format_array.reverse.join("\n")
   end
 
   def formatted_transaction(date, type, amount, balance)
