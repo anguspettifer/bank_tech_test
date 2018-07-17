@@ -26,7 +26,7 @@ I won't spoil the surprise!
 
 If you run this programme over several days, you will note the change in date of transactions.
 
-Running tests
+#### Running tests:
 
 Run
 ``` rspec ```

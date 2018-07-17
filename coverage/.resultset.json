@@ -147,7 +147,6 @@
         12,
         12,
         null,
-        null,
         null
       ],
       "/Users/anguspettifer/Projects/Makers/week_10_projects/bank_tech_test/spec/statement_spec.rb": [
@@ -302,6 +301,6 @@
         null
       ]
     },
-    "timestamp": 1531834481
+    "timestamp": 1531838419
   }
 }
