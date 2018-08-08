@@ -38,7 +38,7 @@ describe 'Feature tests:' do
       transaction_records.deposit(50)
       transaction_records.deposit(150)
       transaction_records.withdraw(120)
-      expect(statement.view).to eq "date || credit || debit || balance\n#{date} ||  || 120.00 || 80.00\n#{date} || 150.00 ||  || 200.00\n#{date} || 50.00 ||  || 50.00"
+      expect(statement.format_statement).to eq "date || credit || debit || balance\n#{date} ||  || 120.00 || 80.00\n#{date} || 150.00 ||  || 200.00\n#{date} || 50.00 ||  || 50.00"
     end
   end
 end

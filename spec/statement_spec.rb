@@ -24,7 +24,7 @@ describe Statement do
 
       allow(transaction_formatter_double).to receive(:create_format).and_return(formatted_transaction_one, formatted_transaction_two, formatted_transaction_three)
 
-      expect(statement.view).to eq "date || credit || debit || balance\n17/7/2018 ||  || 12.00 || 263.00\n16/7/2018 || 125.00 ||  || 275.00\n15/7/2018 || 50.00 ||  || 150.00"
+      expect(statement.format_statement).to eq "date || credit || debit || balance\n17/7/2018 ||  || 12.00 || 263.00\n16/7/2018 || 125.00 ||  || 275.00\n15/7/2018 || 50.00 ||  || 150.00"
     end
   end
 end
