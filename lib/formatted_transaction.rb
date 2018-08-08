@@ -10,7 +10,7 @@ class FormattedTransaction
 
   def create_format
     # is this method doing too much?
-    date = format_date(transaction.date)
+    date = transaction.date
     type = transaction.type
     amount = transaction.amount
     balance = transaction.balance
@@ -20,12 +20,4 @@ class FormattedTransaction
     "#{date} || #{credit_amount} || #{debit_amount} || #{balance}"
   end
 
-  private
-
-  def format_date(date)
-    day = date.day
-    month = date.month
-    year = date.year
-    "#{day}/#{month}/#{year}"
-  end
 end

@@ -2,12 +2,21 @@
 
 require 'transaction'
 
+
 describe Transaction do
-  subject(:transaction) { described_class.new(:date, :type, :amount, :balance) }
+
+  let(:todays_date_double) {
+    double :todays_date,
+    day: 17,
+    month: 7,
+    year: 2018
+   }
+
+  subject(:transaction) { described_class.new(todays_date_double, :type, :amount, :balance) }
 
   describe '#date' do
     it 'returns date of transaction' do
-      expect(transaction.date).to eq :date
+      expect(transaction.date).to eq "17/7/2018"
     end
   end
 
