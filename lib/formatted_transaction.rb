@@ -9,15 +9,16 @@ class FormattedTransaction
   end
 
   def create_format
-    # is this method doing too much?
-    date = transaction.date
-    type = transaction.type
-    amount = transaction.amount
-    balance = transaction.balance
-    credit_amount = format('%.2f', amount) if type == :credit
-    debit_amount = format('%.2f', amount) if type == :debit
-    balance = format('%.2f', balance)
-    "#{date} || #{credit_amount} || #{debit_amount} || #{balance}"
+    credit = format_two_dp(transaction.amount) if transaction.type == :credit
+    debit = format_two_dp(transaction.amount) if transaction.type == :debit
+    balance = format_two_dp(transaction.balance)
+    "#{transaction.date} || #{credit} || #{debit} || #{balance}"
+  end
+
+  private
+
+  def format_two_dp(number)
+    format('%.2f', number)
   end
 
 end
