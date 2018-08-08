@@ -13,14 +13,14 @@ describe 'Feature tests:' do
   end
 
   describe 'transaction_records' do
-    it 'I can deposit money' do
+    it 'I can deposit money which causes my balance to go up by the amount deposited' do
       account = Account.new
       transaction_records = TransactionRecords.new(account)
       transaction_records.deposit(60)
       expect(account.balance).to eq 60
     end
 
-    it 'I can withdraw money' do
+    it 'I can withdraw money which causes my balance to go down by the amount deposited' do
       account = Account.new
       transaction_records = TransactionRecords.new(account)
       transaction_records.deposit(100)

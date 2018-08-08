@@ -32,6 +32,7 @@ class TransactionRecords
   attr_reader :date_class
 
   def date
+    # should date be here?
     date_class.today
   end
 

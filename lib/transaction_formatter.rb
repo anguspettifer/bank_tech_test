@@ -1,14 +1,9 @@
 # frozen_string_literal: true
 
 # Understands how to format a transaction
-class FormattedTransaction
-  attr_reader :transaction
+class TransactionFormatter
 
-  def initialize(transaction)
-    @transaction = transaction
-  end
-
-  def create_format
+  def create_format(transaction)
     credit = format_two_dp(transaction.amount) if transaction.type == :credit
     debit = format_two_dp(transaction.amount) if transaction.type == :debit
     balance = format_two_dp(transaction.balance)
