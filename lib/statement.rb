@@ -11,14 +11,16 @@ class Statement
     @transaction_formatter = transaction_formatter
   end
 
-  attr_reader :transaction_record, :account
-
   def format_statement
     format_array = []
     transaction_record.transactions.each do |transaction|
-      format_array << @transaction_formatter.create_format(transaction)
+      format_array << transaction_formatter.create_format(transaction)
     end
     format_array << HEADER
     format_array.reverse.join("\n")
   end
+
+  private
+  attr_reader :transaction_record, :transaction_formatter
+
 end
