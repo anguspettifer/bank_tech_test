@@ -20,7 +20,7 @@ An application that allows a user to deposit and withdraw money, and view their 
 > @transaction.deposit(1000)
 > @transaction.deposit(2000)
 > @transaction.withdraw(500)
-> puts @statement.view
+> puts @statement.format_statement
 ```
 I won't spoil the surprise!
 
