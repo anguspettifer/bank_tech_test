@@ -12,7 +12,8 @@ describe Transaction do
     year: 2018
    }
 
-  subject(:transaction) { described_class.new(todays_date_double, :type, :amount, :balance) }
+
+  subject(:transaction) { described_class.new(:type, :amount, :balance, todays_date_double) }
 
   describe '#date' do
     it 'returns date of transaction' do

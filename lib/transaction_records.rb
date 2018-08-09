@@ -7,9 +7,8 @@ require 'transaction'
 class TransactionRecords
   attr_reader :transactions
 
-  def initialize(account, date_class = Date, transaction_class = Transaction)
+  def initialize(account, transaction_class = Transaction)
     @account = account
-    @date_class = date_class
     @transactions = []
     @transaction_class = transaction_class
   end
@@ -17,27 +16,21 @@ class TransactionRecords
   def deposit(amount)
     check_for_error(amount)
     account.credit(amount)
-    update_transactions(date, :credit, amount, account.balance)
+    update_transactions(:credit, amount, account.balance)
   end
 
   def withdraw(amount)
     check_for_error(amount)
     account.debit(amount)
-    update_transactions(date, :debit, amount, account.balance)
+    update_transactions(:debit, amount, account.balance)
   end
 
   private
 
   attr_reader :account
-  attr_reader :date_class
 
-  def date
-    # should date be here?
-    date_class.today
-  end
-
-  def update_transactions(date, type, amount, balance)
-    transactions << @transaction_class.new(date, type, amount, balance)
+  def update_transactions(type, amount, balance)
+    transactions << @transaction_class.new(type, amount, balance)
   end
 
   def check_for_error(amount)

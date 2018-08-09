@@ -6,7 +6,7 @@ require 'date'
 class Transaction
   attr_reader :date, :type, :amount, :balance
 
-  def initialize(date, type, amount, balance)
+  def initialize(type, amount, balance, date = Date.today)
     @date = format_date(date)
     @type = type
     @amount = amount
