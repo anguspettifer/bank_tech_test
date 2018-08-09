@@ -13,7 +13,11 @@ describe Transaction do
    }
 
 
-  subject(:transaction) { described_class.new(:type, :amount, :balance, todays_date_double) }
+  subject(:transaction) { described_class.new({
+      type: :credit,
+      amount: 53,
+      balance: 103
+    }, todays_date_double) }
 
   describe '#date' do
     it 'returns date of transaction' do
@@ -23,19 +27,19 @@ describe Transaction do
 
   describe '#type' do
     it 'Returns the type of transaction' do
-      expect(transaction.type).to eq :type
+      expect(transaction.type).to eq :credit
     end
   end
 
   describe '#ammount' do
     it 'Returns the ammount transacted' do
-      expect(transaction.amount).to eq :amount
+      expect(transaction.amount).to eq 53
     end
   end
 
   describe '#new_balance' do
     it 'Returns the new balance' do
-      expect(transaction.balance).to eq :balance
+      expect(transaction.balance).to eq 103
     end
   end
 end

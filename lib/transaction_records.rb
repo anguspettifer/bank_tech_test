@@ -16,21 +16,29 @@ class TransactionRecords
   def deposit(amount)
     check_for_error(amount)
     account.credit(amount)
-    update_transactions(:credit, amount, account.balance)
+    update_transactions({
+      type: :credit,
+      amount: amount,
+      balance: account.balance
+      })
   end
 
   def withdraw(amount)
     check_for_error(amount)
     account.debit(amount)
-    update_transactions(:debit, amount, account.balance)
+    update_transactions({
+      type: :debit,
+      amount: amount,
+      balance: account.balance
+      })
   end
 
   private
 
   attr_reader :account
 
-  def update_transactions(type, amount, balance)
-    transactions << @transaction_class.new(type, amount, balance)
+  def update_transactions(details)
+    transactions << @transaction_class.new(details)
   end
 
   def check_for_error(amount)
